@@ -34,13 +34,38 @@
         .shape-circle {
             border-radius: 50%;
         }
+
+        .zoom-out {
+            /* Reduz a escala do iframe para 0.5 (50%) */
+            transform: scale(0.8);
+            /* Define a origem da transformação no canto superior esquerdo */
+            transform-origin: top left;
+        }
+
+        .uk-section {
+            align-items: center;
+        }
+
+        .div-frame {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            padding: auto;
+        }
+
+        .iframe-container {
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+        }
     </style>
 
 </head>
 
 <body>
-
-    
 
     <div id="intro" class="uk-section uk-section-xsmall" style="background-color: #1C1C1C; padding-top: 0;">
         <div class="uk-sticky-placeholder" style="height: 30px; width: 375.2px; margin: 0px;"></div>
@@ -57,7 +82,7 @@
         </div>
     </div>
 
-    <div id="features" class="uk-section uk-section-xsmall" style="background-color: #FFEC99;">
+    <div id="features" class="uk-section uk-height-1-1 div-frame" style="background-color: #FFEC99;">
         <div class="uk-container">
             <h1 class="uk-heading-large" style="font-weight: 900;"><svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-clock-history" viewBox="0 0 16 16">
                 <path d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022zm2.004.45a7 7 0 0 0-.985-.299l.219-.976q.576.129 1.126.342zm1.37.71a7 7 0 0 0-.439-.27l.493-.87a8 8 0 0 1 .979.654l-.615.789a7 7 0 0 0-.418-.302zm1.834 1.79a7 7 0 0 0-.653-.796l.724-.69q.406.429.747.91zm.744 1.352a7 7 0 0 0-.214-.468l.893-.45a8 8 0 0 1 .45 1.088l-.95.313a7 7 0 0 0-.179-.483m.53 2.507a7 7 0 0 0-.1-1.025l.985-.17q.1.58.116 1.17zm-.131 1.538q.05-.254.081-.51l.993.123a8 8 0 0 1-.23 1.155l-.964-.267q.069-.247.12-.501m-.952 2.379q.276-.436.486-.908l.914.405q-.24.54-.555 1.038zm-.964 1.205q.183-.183.35-.378l.758.653a8 8 0 0 1-.401.432z"/>
@@ -66,543 +91,26 @@
               </svg> Horários</h1>
             <h2 class="uk-margin-small-top" style="font-weight: lighter;">Linhas de ônibus disponíveis</h2>
             <div class="uk-grid uk-grid-match uk-grid-small">
-                <div class="uk-width-1-3@l uk-width-1-2@s uk-margin-small-top uk-margin-small-bottom">
+                <div class="uk-width-1-1 uk-height-large uk-margin-small-top uk-margin-small-bottom">
                     <div class="uk-card uk-card-body uk-card-default uk-card-small" style="border-radius: 8px;">
                         <ul uk-accordion="multiple: true" class="uk-accordion">
                             <li class="uk-padding-small uk-margin-small" style="background-color: #FFFFFF; border-radius: 8px;">
-                                <a href="#" class="uk-accordion-title uk-text-bold">AVARÉ</a>
-                                <div class="uk-accordion-content" hidden="">
-                                    <p><b>DIAS ÚTEIS</b></p>
-                                    <ul>
-                                        <li>05:10</li>
-                                        <li>07:10</li>
-                                        <li>10:00</li>
-                                        <li>12:35 - <b>Cambara</b></li>
-                                        <li>15:00</li>
-                                        <li>16:00 - <b>Cambara</b></li>
-                                        <li>18:35</li>
-                                        <li>20:00</li>
-                                    </ul>
-                                    <p><b>SÁBADOS</b></p>
-                                    <ul>
-                                        <li>05:10</li>
-                                        <li>07:10</li>
-                                        <li>10:00</li>
-                                        <li>12:35 - <b>Cambara</b></li>
-                                        <li>16:00 - <b>Cambara</b></li>
-                                        <li>18:35</li>
-                                    </ul>
-                                    <p><b>DOMINGOS E FERIADOS</b></p>
-                                    <ul>
-                                        <li>05:10</li>
-                                        <li>07:10</li>
-                                        <li>10:00</li>
-                                        <li>12:35 - <b>Cambara</b></li>
-                                        <li>16:00 - <b>Cambara</b></li>
-                                        <li>18:35</li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                        <ul uk-accordion="multiple: true" class="uk-accordion">
-                            <li class="uk-padding-small uk-margin-small" style="background-color: #FFFFFF; border-radius: 8px;">
-                                <a href="#" class="uk-accordion-title uk-text-bold">CAMPING</a>
-                                <div class="uk-accordion-content" hidden="">
-                                    <p><b>DIAS ÚTEIS</b></p>
-                                    <ul>
-                                        <li>06:00 - <b>Hosp</b></li>
-                                        <li>08:00</li>
-                                        <li>14:00 - <b>Cambara</b></li>
-                                        <li>16:00</li>
-                                        <li>17:10 - <b>Cambara</b></li>
-                                        <li>19:30</li>
-                                        <li>21:00</li>
-                                    </ul>
-                                    <p><b>SÁBADOS</b></p>
-                                    <ul>
-                                        <li>06:00 - <b>Hosp</b></li>
-                                        <li>08:00</li>
-                                        <li>14:00 - <b>Cambara</b></li>
-                                        <li>17:10 - <b>Cambara</b></li>
-                                        <li>19:30</li>
-                                    </ul>
-                                    <p><b>DOMINGOS E FERIADOS</b></p>
-                                    <ul>
-                                        <li>06:00 - <b>Hosp</b></li>
-                                        <li>08:00</li>
-                                        <li>11:15 - <b>Cambara</b></li>
-                                        <li>14:00</li>
-                                        <li>17:10 - <b>Cambara</b></li>
-                                        <li>19:30</li>
-                                    </ul>
-                                </div>
+                                <iframe src="https://programacao.cittati.com.br/?token=95Si4szi0eHv6A_ntWaGbv8OlaP-Pr15G4sBv10s-nD76oLALLt8zWiKhWPbeDO62otrMxbnlrcnG3lA4Y1Fhv9x4Fl4MHdhlmg937XDyF9xJKk7GPulvA==&company=movavare@avare.com.br" class="zoom-out uk-width-1-1 uk-height-large iframe-container"  frameborder="0" scrolling="yes"></iframe>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <div class="uk-width-1-3@l uk-width-1-2@s uk-margin-small-top uk-margin-small-bottom">
-                    <div class="uk-card uk-card-body uk-card-default uk-card-small" style="border-radius: 8px;">
-                        <ul uk-accordion="multiple: true" class="uk-accordion">
-                            <li class="uk-padding-small uk-margin-small" style="background-color: #FFFFFF; border-radius: 8px;">
-                                <a href="#" class="uk-accordion-title uk-text-bold">AVARÉ</a>
-                                <div class="uk-accordion-content" hidden="">
-                                    <p><b>DIAS ÚTEIS</b></p>
-                                    <ul>
-                                        <li>05:00</li>
-                                        <li>05:05</li>
-                                        <li>12:00</li>
-                                        <li>14:15 - <b>Faculdade</b></li>
-                                        <li>16:15</li>
-                                        <li>21:15 - <b>Jatob</b></li>
-                                        <li>22:30 - <b>Escolar</b></li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                        <ul uk-accordion="multiple: true" class="uk-accordion">
-                            <li class="uk-padding-small uk-margin-small" style="background-color: #FFFFFF; border-radius: 8px;">
-                                <a href="#" class="uk-accordion-title uk-text-bold">Camping Via Brabância</a>
-                                <div class="uk-accordion-content" hidden="">
-                                    <p><b>DIAS ÚTEIS</b></p>
-                                    <ul>
-                                        <li>06:00</li>
-                                        <li>06:01 - <b>Faculdade</b></li>
-                                        <li>13:00</li>
-                                        <li>15:15 - <b>Faculdade</b></li>
-                                        <li>18:00</li>
-                                        <li>22:15</li>
-                                        <li>23:30</li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="uk-width-1-3@l uk-width-1-2@s uk-margin-small-top uk-margin-small-bottom">
-                    <div class="uk-card uk-card-body uk-card-default uk-card-small" style="border-radius: 8px;">
-                        <ul uk-accordion="multiple: true" class="uk-accordion">
-                            <li class="uk-padding-small uk-margin-small" style="background-color: #FFFFFF; border-radius: 8px;">
-                                <a href="#" class="uk-accordion-title uk-text-bold">Parque Industrial</a>
-                                <div class="uk-accordion-content" hidden="">
-                                    <h3>AV FUAD HASPANI</h3>
-                                    <p><b>DIAS ÚTEIS</b></p>
-                                    <ul>
-                                        <li>06:50</li>
-                                        <li>14:10</li>
-                                        <li>17:00 - <b>Monoplastic</b></li>
-                                        <li>23:40</li>
-                                    </ul>
-                                    <p><b>SÁBADOS</b></p>
-                                    <ul>
-                                        <li>06:50</li>
-                                        <li>14:10</li>
-                                        <li>17:00 - <b>Monoplastic</b></li>
-                                        <li>23:40</li>
-                                    </ul>
-                                    <h3>AV MAJOR RANGEL</h3>
-                                    <p><b>DIAS ÚTEIS</b></p>
-                                    <ul>
-                                        <li>03:45</li>
-                                        <li>05:10</li>
-                                        <li>12:40</li>
-                                        <li>15:40</li>
-                                        <li>21:45</li>
-                                    </ul>
-                                    <p><b>SÁBADOS</b></p>
-                                    <ul>
-                                        <li>03:45</li>
-                                        <li>05:10</li>
-                                        <li>12:40</li>
-                                        <li>15:40</li>
-                                        <li>21:45</li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="uk-width-1-3@l uk-width-1-2@s uk-margin-small-top uk-margin-small-bottom">
-                    <div class="uk-card uk-card-body uk-card-default uk-card-small" style="border-radius: 8px;">
-                        <ul uk-accordion="multiple: true" class="uk-accordion">
-                            <li class="uk-padding-small uk-margin-small" style="background-color: #FFFFFF; border-radius: 8px;">
-                                <a href="#" class="uk-accordion-title uk-text-bold">Bonsucesso / Avaré I</a>
-                                <div class="uk-accordion-content" hidden="">
-                                    <h3>AV TRÊS MARIAS</h3>
-                                    <p><b>DIAS ÚTEIS</b></p>
-                                    <ul>
-                                        <li>06:30</li>
-                                        <li>08:30</li>
-                                        <li>13:00</li>
-                                        <li>15:00</li>
-                                        <li>17:40 - <b>Padre Emilio</b></li>
-                                    </ul>
-                                    <p><b>SÁBADOS</b></p>
-                                    <ul>
-                                        <li>06:30</li>
-                                        <li>08:30</li>
-                                        <li>17:00</li>
-                                        <li>18:30</li>
-                                    </ul>
-                                    <h3>RUA DR EMILIO FIGUEIREDO</h3>
-                                    <p><b>DIAS ÚTEIS</b></p>
-                                    <ul>
-                                        <li>07:30</li>
-                                        <li>12:30 - <b>Duilio</b></li>
-                                        <li>14:00</li>
-                                    </ul>
-                                    <p><b>SÁBADOS</b></p>
-                                    <ul>
-                                        <li>07:30</li>
-                                        <li>17:30</li>
-                                    </ul>
-                                    <h3>RUA LUCAS SCARCELLI</h3>
-                                    <p><b>DIAS ÚTEIS</b></p>
-                                    <ul>
-                                        <li>17:00 - <b>Paineiras</b></li>
-                                    </ul>
-                                    <p><b>SÁBADOS</b></p>
-                                    <ul>
-                                        <li>17:00 - <b>Paineiras</b></li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="uk-width-1-3@l uk-width-1-2@s uk-margin-small-top uk-margin-small-bottom">
-                    <div class="uk-card uk-card-body uk-card-default uk-card-small" style="border-radius: 8px;">
-                        <ul uk-accordion="multiple: true" class="uk-accordion">
-                            <li class="uk-padding-small uk-margin-small" style="background-color: #FFFFFF; border-radius: 8px;">
-                                <a href="#" class="uk-accordion-title uk-text-bold">Tropical / Paineiras</a>
-                                <div class="uk-accordion-content" hidden="">
-                                    <h3>AV MARIO COVAS</h3>
-                                    <p><b>DIAS ÚTEIS</b></p>
-                                    <ul>
-                                        <li>06:00</li>
-                                        <li>08:30</li>
-                                        <li>11:30 - <b>Padre Emilio</b></li>
-                                        <li>12:20 - <b>Sesi</b></li>
-                                        <li>13:00</li>
-                                        <li>15:40</li>
-                                        <li>17:00</li>
-                                    </ul>
-                                    <p><b>SÁBADOS</b></p>
-                                    <ul>
-                                        <li>12:10</li>
-                                    </ul>
-                                    <h3>AVENIDA PARANAPANEMA</h3>
-                                    <p><b>DIAS ÚTEIS</b></p>
-                                    <ul>
-                                        <li>12:40 - <b>Padre Emilio</b></li>
-                                    </ul>
-                                    <h3>RUA BAHIA</h3>
-                                    <p><b>DIAS ÚTEIS</b></p>
-                                    <ul>
-                                        <li>16:00 - <b>Pan</b></li>
-                                    </ul>
-                                    <h3>RUA EMILIO FIGUEIREDO</h3>
-                                    <p><b>DIAS ÚTEIS</b></p>
-                                    <ul>
-                                        <li>07:30</li>
-                                        <li>18:15</li>
-                                    </ul>
-                                    <p><b>SÁBADOS</b></p>
-                                    <ul>
-                                        <li>13:10</li>
-                                    </ul>
-                                    <h3>RUA PARAÍBA</h3>
-                                    <p><b>DIAS ÚTEIS</b></p>
-                                    <ul>
-                                        <li>14:00 - <b>Escola</b></li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="uk-width-1-3@l uk-width-1-2@s uk-margin-small-top uk-margin-small-bottom">
-                    <div class="uk-card uk-card-body uk-card-default uk-card-small" style="border-radius: 8px;">
-                        <ul uk-accordion="multiple: true" class="uk-accordion">
-                            <li class="uk-padding-small uk-margin-small" style="background-color: #FFFFFF; border-radius: 8px;">
-                                <a href="#" class="uk-accordion-title uk-text-bold">Duilio / Mário Bannwart</a>
-                                <div class="uk-accordion-content" hidden="">
-                                    <h3>AV MAJOR RANGEL</h3>
-                                    <p><b>DIAS ÚTEIS</b></p>
-                                    <ul>
-                                        <li>17:30 - <b>Escolas</b></li>
-                                    </ul>
-                                    <h3>PRAÇA PADRE ROBERTO JUSTINO</h3>
-                                    <p><b>DIAS ÚTEIS</b></p>
-                                    <ul>
-                                        <li>18:00 - <b>Terminal</b></li>
-                                    </ul>
-                                    <h3>RUA JOÃO TEZZA</h3>
-                                    <p><b>DIAS ÚTEIS</b></p>
-                                    <ul>
-                                        <li>06:00</li>
-                                        <li>08:00</li>
-                                        <li>12:20</li>
-                                        <li>19:00</li>
-                                    </ul>
-                                    <p><b>SÁBADOS</b></p>
-                                    <ul>
-                                        <li>06:00</li>
-                                        <li>08:00</li>
-                                        <li>17:10</li>
-                                        <li>18:50</li>
-                                    </ul>
-                                    <h3>TRAVESSA ANTONI C. DE OLIVEIRA</h3>
-                                    <p><b>DIAS ÚTEIS</b></p>
-                                    <ul>
-                                        <li>06:55</li>
-                                        <li>09:05</li>
-                                        <li>11:50 - <b>Ter</b></li>
-                                        <li>13:25</li>
-                                        <li>18:10</li>
-                                    </ul>
-                                    <p><b>SÁBADOS</b></p>
-                                    <ul>
-                                        <li>06:55</li>
-                                        <li>17:50</li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="uk-width-1-3@l uk-width-1-2@s uk-margin-small-top uk-margin-small-bottom">
-                    <div class="uk-card uk-card-body uk-card-default uk-card-small" style="border-radius: 8px;">
-                        <ul uk-accordion="multiple: true" class="uk-accordion">
-                            <li class="uk-padding-small uk-margin-small" style="background-color: #FFFFFF; border-radius: 8px;">
-                                <a href="#" class="uk-accordion-title uk-text-bold">Vila Esperança / Plimec</a>
-                                <div class="uk-accordion-content" hidden="">
-                                    <h3>AV CELSO FERREIRA DA SILVA</h3>
-                                    <p><b>DIAS ÚTEIS</b></p>
-                                    <ul>
-                                        <li>11:45 - <b>Castelinho</b></li>
-                                    </ul>
-                                    <h3>RUA FRANCISCO JORGE LIMA</h3>
-                                    <p><b>DIAS ÚTEIS</b></p>
-                                    <ul>
-                                        <li>05:40</li>
-                                        <li>07:40</li>
-                                        <li>13:40</li>
-                                        <li>17:40</li>
-                                    </ul>
-                                    <p><b>SÁBADOS</b></p>
-                                    <ul>
-                                        <li>05:40</li>
-                                        <li>07:40</li>
-                                        <li>13:40</li>
-                                        <li>17:40</li>
-                                    </ul>
-                                    <h3>RUA LUIZ SCARELLI</h3>
-                                    <p><b>DIAS ÚTEIS</b></p>
-                                    <ul>
-                                        <li>17:00 - <b>Paineiras</b></li>
-                                    </ul>
-                                    <h3>RUA NICONOR GARCIA</h3>
-                                    <p><b>DIAS ÚTEIS</b></p>
-                                    <ul>
-                                        <li>06:40</li>
-                                        <li>08:40</li>
-                                        <li>12:40</li>
-                                        <li>18:40</li>
-                                    </ul>
-                                    <p><b>SÁBADOS</b></p>
-                                    <ul>
-                                        <li>06:40</li>
-                                        <li>08:40</li>
-                                        <li>12:40</li>
-                                        <li>18:40</li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="uk-width-1-3@l uk-width-1-2@s uk-margin-small-top uk-margin-small-bottom">
-                    <div class="uk-card uk-card-body uk-card-default uk-card-small" style="border-radius: 8px;">
-                        <ul uk-accordion="multiple: true" class="uk-accordion">
-                            <li class="uk-padding-small uk-margin-small" style="background-color: #FFFFFF; border-radius: 8px;">
-                                <a href="#" class="uk-accordion-title uk-text-bold">Barra Grande</a>
-                                <div class="uk-accordion-content" hidden="">
-                                    <h3>RUA ANTONIO QUINTILIANO</h3>
-                                    <p><b>DIAS ÚTEIS</b></p>
-                                    <ul>
-                                        <li>06:10</li>
-                                        <li>12:00</li>
-                                        <li>13:15</li>
-                                        <li>15:00</li>
-                                        <li>17:00</li>
-                                        <li>18:40</li>
-                                        <li>22:00</li>
-                                    </ul>
-                                    <p><b>SÁBADOS</b></p>
-                                    <ul>
-                                        <li>06:00</li>
-                                        <li>08:00</li>
-                                        <li>12:00</li>
-                                        <li>18:40</li>
-                                    </ul>
-                                    <p><b>DOMINGOS E FERIADOS</b></p>
-                                    <ul>
-                                        <li>06:00</li>
-                                        <li>08:00</li>
-                                        <li>12:00</li>
-                                        <li>18:40</li>
-                                    </ul>
-                                    <h3>RUA DR FELIZ FAGUNDES</h3>
-                                    <p><b>DIAS ÚTEIS</b></p>
-                                    <ul>
-                                        <li>05:10</li>
-                                        <li>07:00</li>
-                                        <li>11:00</li>
-                                        <li>12:00</li>
-                                        <li>14:00</li>
-                                        <li>18:00</li>
-                                        <li>21:00</li>
-                                    </ul>
-                                    <p><b>SÁBADOS</b></p>
-                                    <ul>
-                                        <li>05:10</li>
-                                        <li>07:10</li>
-                                        <li>11:00</li>
-                                        <li>18:00</li>
-                                    </ul>
-                                    <p><b>DOMINGOS E FERIADOS</b></p>
-                                    <ul>
-                                        <li>05:10</li>
-                                        <li>07:10</li>
-                                        <li>11:00</li>
-                                        <li>18:00</li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="uk-width-1-3@l uk-width-1-2@s uk-margin-small-top uk-margin-small-bottom">
-                    <div class="uk-card uk-card-body uk-card-default uk-card-small" style="border-radius: 8px;">
-                        <ul uk-accordion="multiple: true" class="uk-accordion">
-                            <li class="uk-padding-small uk-margin-small" style="background-color: #FFFFFF; border-radius: 8px;">
-                                <a href="#" class="uk-accordion-title uk-text-bold">Ponte Alta</a>
-                                <div class="uk-accordion-content" hidden="">
-                                    <p><b>DIAS ÚTEIS</b></p>
-                                    <ul>
-                                        <li>19:50</li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="uk-width-1-3@l uk-width-1-2@s uk-margin-small-top uk-margin-small-bottom">
-                    <div class="uk-card uk-card-body uk-card-default uk-card-small" style="border-radius: 8px;">
-                        <ul uk-accordion="multiple: true" class="uk-accordion">
-                            <li class="uk-padding-small uk-margin-small" style="background-color: #FFFFFF; border-radius: 8px;">
-                                <a href="#" class="uk-accordion-title uk-text-bold">Vila Esperança / Etec</a>
-                                <div class="uk-accordion-content" hidden="">
-                                    <h3>RUA ALVARO LEMOS TORRES</h3>
-                                    <p><b>DIAS ÚTEIS</b></p>
-                                    <ul>
-                                        <li>07:10</li>
-                                        <li>14:15</li>
-                                        <li>16:15</li>
-                                        <li>21:15</li>
-                                        <li>22:45</li>
-                                    </ul>
-                                    <h3>RUA NICONOR GARCIA</h3>
-                                    <p><b>DIAS ÚTEIS</b></p>
-                                    <ul>
-                                        <li>06:00</li>
-                                        <li>13:00</li>
-                                        <li>15:15</li>
-                                        <li>20:15</li>
-                                        <li>22:15</li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="uk-width-1-3@l uk-width-1-2@s uk-margin-small-top uk-margin-small-bottom">
-                    <div class="uk-card uk-card-body uk-card-default uk-card-small" style="border-radius: 8px;">
-                        <ul uk-accordion="multiple: true" class="uk-accordion">
-                            <li class="uk-padding-small uk-margin-small" style="background-color: #FFFFFF; border-radius: 8px;">
-                                <a href="#" class="uk-accordion-title uk-text-bold">Duilio / Etec</a>
-                                <div class="uk-accordion-content" hidden="">
-                                    <h3>RUA ALVARO LEMES TORRES</h3>
-                                    <p><b>DIAS ÚTEIS</b></p>
-                                    <ul>
-                                        <li>07:10</li>
-                                        <li>14:15</li>
-                                        <li>16:15</li>
-                                        <li>21:15</li>
-                                        <li>22:45</li>
-                                    </ul>
-                                    <h3>TRAVESSA ANTONIO C. DE OLVEIRA</h3>
-                                    <p><b>DIAS ÚTEIS</b></p>
-                                    <ul>
-                                        <li>06:00</li>
-                                        <li>13:00</li>
-                                        <li>15:15</li>
-                                        <li>20:15</li>
-                                        <li>22:15</li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="uk-width-1-3@l uk-width-1-2@s uk-margin-small-top uk-margin-small-bottom">
-                    <div class="uk-card uk-card-body uk-card-default uk-card-small" style="border-radius: 8px;">
-                        <ul uk-accordion="multiple: true" class="uk-accordion">
-                            <li class="uk-padding-small uk-margin-small" style="background-color: #FFFFFF; border-radius: 8px;">
-                                <a href="#" class="uk-accordion-title uk-text-bold">São Marcos Via Remanso</a>
-                                <div class="uk-accordion-content" hidden="">
-                                    <h3>AV.ESPANHA</h3>
-                                    <p><b>DIAS ÚTEIS</b></p>
-                                    <ul>
-                                        <li>06:10</li>
-                                    </ul>
-                                    <p><b>SÁBADOS</b></p>
-                                    <ul>
-                                        <li>06:10</li>
-                                    </ul>
-                                    <h3>AV.MAJOR RANGEL</h3>
-                                    <p><b>DIAS ÚTEIS</b></p>
-                                    <ul>
-                                        <li>13:30 - <b>Terminal</b></li>
-                                        <li>21:40 - <b>Terminal</b></li>
-                                    </ul>
-                                    <h3>HOTEL PENINSULA</h3>
-                                    <p><b>DIAS ÚTEIS</b></p>
-                                    <ul>
-                                        <li>07:10</li>
-                                    </ul>
-                                    <p><b>SÁBADOS</b></p>
-                                    <ul>
-                                        <li>07:10</li>
-                                    </ul>
-                                    <p><b>DOMINGOS E FERIADOS</b></p>
-                                    <ul>
-                                        <li>07:10</li>
-                                    </ul>
-                                    <h3>RUA DELFINA LOPES</h3>
-                                    <p><b>DIAS ÚTEIS</b></p>
-                                    <ul>
-                                        <li>12:00 - <b>Bannwart</b></li>
-                                    </ul>
-                                    <h3>RUA WALDEMAR COSTA PERES</h3>
-                                    <p><b>DIAS ÚTEIS</b></p>
-                                    <ul>
-                                        <li>06:00</li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="ad2" class="uk-section uk-section-xsmall" style="background-color: #ffffff;">
+        <div class="uk-container">
+            <div class="uk-grid">
+                <div class="uk-width-expand" style="display: flex; justify-content: center; align-items: center; height: 100%;">
+                    <a id="link-imagem" href="" target="_blank">
+                        <img id="imagem" src="" alt="Anuncie Aqui!" style="width: 100%; height: auto; object-fit: cover;">
+                      </a>
                 </div>
             </div>
         </div>
@@ -621,6 +129,38 @@
 
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.23/dist/js/uikit.min.js"></script>
 
+    <script>
+        // Lista de objetos com URLs das imagens e URLs dos links
+        var imagens = [
+          { imagem: "../img/ad/1.svg", link: "#" },
+          { imagem: "../img/ad/0.svg", link: "https://api.whatsapp.com/send?phone=5514997744406&text=Ol%C3%A1%20eu%20gostaria%20de%20anunciar%20meu%20neg%C3%B3cio%20no%20AvaBus%2C%20como%20funciona%20%3F" },
+          { imagem: "../img/ad/2.svg", link: "https://www.instagram.com/hv_eletricidade/" }
+          // Adicione quantos pares de URLs desejar
+        ];
+        
+        // Função para escolher aleatoriamente uma imagem da lista
+        function escolherImagemAleatoria() {
+          var indice = Math.floor(Math.random() * imagens.length);
+          return imagens[indice];
+        }
+        
+        // Função para definir a imagem aleatória e seu link correspondente
+        function definirImagemAleatoria() {
+          var imagemAleatoria = escolherImagemAleatoria();
+          var imagemElemento = document.getElementById("imagem");
+          var linkElemento = document.getElementById("link-imagem");
+          imagemElemento.src = imagemAleatoria.imagem;
+          linkElemento.href = imagemAleatoria.link;
+        }
+        
+        // Chamando a função para definir a imagem ao carregar a página
+        definirImagemAleatoria();
+        
+        // Adicionando um listener para atualizar a imagem quando a página for recarregada
+        window.addEventListener("load", definirImagemAleatoria);
+        
+        </script>
 
+</body>
 
-</body></html>
+</html>
